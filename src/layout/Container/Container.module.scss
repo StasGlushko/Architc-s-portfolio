@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.container {
+	margin: 0 auto;
+	padding: 0 40px 30px;
+	height: calc(100% - 82px);
+	max-width: $pc;
+}
+
+
+@media (max-width: $mobile) {
+	.container {
+		padding: 0 30px 30px;
+	}
+}

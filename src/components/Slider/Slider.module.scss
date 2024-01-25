@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.slider {
+	.preview {
+		padding: 0 60px;
+		height: 340px;
+		position: relative;
+
+		.arrow {
+			position: absolute;
+			background-color: transparent;
+			// border: none;
+			border: 1px solid transparent;
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			transition: all 0.3s ease;
+
+			svg {
+				width: 20px;
+				height: 20px;
+				transition: all 0.3s ease;
+				color: $white;
+			}
+
+			&.nextBtn {
+				right: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&.prevBtn {
+				left: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&:hover {
+				border: 1px solid $secondary;
+				svg {
+					color: $secondary;
+				}
+			}
+		}
+
+		div {
+			height: 100%;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+	}
+
+	.list {
+		display: flex;
+		gap: 8px;
+
+		overflow: auto;
+		
+
+		.item {
+			cursor: pointer;
+			padding: 5px 0;
+			height: 115px;
+			width: auto;
+
+			
+		}
+
+		.item img {
+			height: 104px;
+			width: auto;
+			position: relative;
+
+			&.active {
+				border: 3px solid transparent;
+			}
+		}
+	}
+}

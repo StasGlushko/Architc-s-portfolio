@@ -1,0 +1,32 @@
+.wrapper {
+	height: 100vh;
+	width: 100vw;
+
+	// background-image: url('/public/images/bg2.jpeg');
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url('/images/bg2.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	.container {
+		display: flex;
+		gap: 100px;
+		justify-content: end;
+		align-items: end;
+		height: calc(100% - 82px);
+	}
+}
+
+
+@media (max-width: 850px) {
+	.wrapper {
+		.container {
+			flex-direction: column;
+			gap: 30px;
+			align-items: center;
+			justify-content: start;
+			overflow-y: scroll;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.textArea {
+   background-color: transparent;
+   border: $white 1px solid;
+   padding:  9px;
+   color: $white;
+   resize: none;
+   min-height: 120px;
+   font-size: 16px;
+
+
+   &::placeholder {
+      color: $white;
+   }
+}

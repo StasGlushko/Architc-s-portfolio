@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.socLink {
+   background-color: $secondary;
+   padding: 5px;
+   cursor: pointer;
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}

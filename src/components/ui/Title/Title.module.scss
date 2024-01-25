@@ -1,0 +1,31 @@
+@import '../../../styles/variables.scss';
+
+.title {
+   font-size: 50px;
+   font-weight: 600;
+   display: inline-block;
+   text-align: center;
+   
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 7px;
+		height: 40px;
+		margin-right: 10px;
+
+      position: relative;
+      bottom: -4.5px;
+      
+		background-color: $secondary;
+	}
+}
+
+@media (max-width: $mobileSmall) {
+	.title {
+		font-size: 30px;
+
+		&::before {
+			height: 30px;
+		}
+	}
+}

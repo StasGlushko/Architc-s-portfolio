@@ -1,0 +1,45 @@
+@import '/src/styles/variables.scss';
+
+.button {
+	color: $white;
+	border: 1px solid $white;
+	background-color: transparent;
+	padding: 20px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: all 0.2s ease;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $white;
+		color: $gray;
+	}
+
+	&.secColor {
+		border-color: $secondary;
+
+		&:hover {
+			background-color: $secondary;
+			color: $white;
+		}
+	}
+
+	svg {
+		width: auto;
+		height: 18px;
+	}
+}
+
+// @media (max-width: 510px) {
+// 	.button {
+// 		padding: 15px 30px;
+// 	}
+// }
+
+@media (max-width: 400px) {
+	.button {
+		padding: 10px 20px;
+	}
+}

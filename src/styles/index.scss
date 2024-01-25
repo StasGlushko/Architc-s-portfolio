@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;600;700;900&display=swap');
+@import './reset.scss';
+@import './variables.scss';
+
+body {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 22px;
+	color: $white;
+
+	box-sizing: border-box;
+
+	::-webkit-scrollbar {
+		width: 4px;
+		height: 4px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background-color: rgb(172, 178, 203);
+		// border-radius: 15px;
+		// border: 1px solid #11111100;
+	}
+}
+
+a {
+	color: $white;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+button {
+	font-size: 16px;
+}
+
+* {
+	// Виділення тексту
+	&::selection {
+		background: rgba($secondary, 0.7);
+		color: $white;
+	}
+	&::-moz-selection {
+		background: rgba($secondary, 0.7);
+		color: $white;
+	}
+}
