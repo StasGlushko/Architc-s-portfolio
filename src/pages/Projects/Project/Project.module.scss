@@ -44,19 +44,69 @@
 	.bgContainer {
 		width: 65%;
 		height: 80vh;
-		
+
 		margin: 0 auto;
 		padding: 20px;
-		
+
 		background-color: rgba($gray, 0.75);
 		overflow-y: auto;
-	
+
 		.info {
 			margin-top: 20px;
 
 			.name {
 				margin-bottom: 5px;
 			}
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.wrapper {
+		.bgContainer {
+			width: 85%;
+		}
+	}
+}
+
+@media (max-width: $mobile) {
+	.wrapper {
+		.container {
+			.backBtn {
+				// z-index: 3;
+				// top: 10px;
+				// left: 40px;
+				// border: 1px solid $white;
+				// &:hover {
+				// 	border: 1px solid $secondary;
+				// 	svg {
+				// 		color: $secondary;
+				// 	}
+				// }
+				display: none;
+			}
+
+			.bgContainer {
+				width: 100%;
+
+				.info {
+					margin-top: 10px;
+					font-size: 16px;
+
+					.name {
+						margin-bottom: 5px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 470px) {
+	.wrapper {
+		.container {
+			padding: 0;
 		}
 	}
 }

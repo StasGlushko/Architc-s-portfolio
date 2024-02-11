@@ -16,7 +16,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			
+
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
@@ -49,7 +49,7 @@
 			}
 		}
 
-		div {
+		.bgImg {
 			height: 100%;
 			width: 100%;
 			background-repeat: no-repeat;
@@ -63,15 +63,12 @@
 		gap: 8px;
 
 		overflow: auto;
-		
 
 		.item {
 			cursor: pointer;
 			padding: 5px 0;
 			height: 115px;
 			width: auto;
-
-			
 		}
 
 		.item img {
@@ -81,6 +78,51 @@
 
 			&.active {
 				border: 3px solid transparent;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.slider {
+		.preview {
+			padding: 0;
+			height: 260px;
+
+			.arrow {
+				opacity: 0.7;
+				background-color: $primary;
+				svg {
+					color: $white;
+				}
+				&:hover {
+					border: none;
+					svg {
+						color: $white;
+					}
+				}
+			}
+		}
+		.list {
+			.item {
+				height: 95px;
+
+				& img {
+					height: 84px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.slider {
+		.preview {
+			height: 180px;
+
+			.arrow {
+				width: 25px;
+				height: 25px;
 			}
 		}
 	}

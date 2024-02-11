@@ -25,7 +25,7 @@ export const SliderComponent: FC<IProps> = ({
 				<button className={s.prevBtn + ' ' + s.arrow} onClick={prevImg}>
 					<IoMdArrowRoundBack />
 				</button>
-				<div style={{ backgroundImage: `url(${currentImg?.url})` }}></div>
+				<div className={s.bgImg} style={{ backgroundImage: `url(${currentImg?.url})` }}></div>
 				<button className={s.nextBtn + ' ' + s.arrow} onClick={nextImg}>
 					<IoMdArrowRoundForward />
 				</button>

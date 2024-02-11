@@ -3,7 +3,7 @@ import { IoMdArrowRoundBack } from 'react-icons/io'
 
 import s from './Project.module.scss'
 
-import { Container } from '../../../layout/Container/Container'
+import { Container } from '../../../layout/Container/Container';
 import { Header } from '../../../components/Header/Header'
 import { Slider } from '../../../components/Slider/Slider'
 import { IProjectItem } from '../../../types/Types'
@@ -20,7 +20,7 @@ export const ProjectComponent: FC<IProps> = ({
 	return (
 		<div className={s.wrapper}>
 			<Header />
-			<Container>
+			<Container className={s.container}>
 				<button onClick={backToProjectsPage} className={s.backBtn}>
 					<IoMdArrowRoundBack />
 				</button>
