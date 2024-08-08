@@ -1,0 +1,51 @@
+.wrapper {
+	color: black;
+}
+
+// dashboard
+
+// login
+
+.loginContainer {
+   height: 100vh;
+   padding: 0 40px;
+}
+
+.loginWrap {
+	height: 100%;
+   display: flex;
+
+	.form {
+		min-width: 300px;
+		width: 40%;
+		height: 60%;
+		margin: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+		background-color: rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 5px;
+
+      input {
+         padding: 7px 10px;
+         outline-color: #838fee;
+      }
+
+      button {
+         padding: 7px 20px;
+         cursor: pointer;
+
+         border: 1px solid #838fee;
+         border-radius: 4px;
+         
+         transition: background-color .3s ease;
+         &:hover {
+            background-color: #838fee;
+         }
+      }
+   }
+}

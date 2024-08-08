@@ -1,17 +1,17 @@
 module.exports = {
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  plugins: ['react-refresh'],
-  rules: {
-    'react-refresh/only-export-components': 'warn',
-    "no-mixed-spaces-and-tabs": 0,
-  },
+	extends: ['react-app'],
+	rules: {},
+	overrides: [
+		{
+			files: ['**/*.ts?(x)'],
+			rules: {
+				// ******** add ignore rules here *********
+				'react/no-unescaped-entities': 'off',
+				'react/display-name': 'off',
+				'react/prop-types': 'off',
+			},
+		},
+	],
 }
 
 // module.exports = {

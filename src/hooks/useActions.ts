@@ -2,10 +2,12 @@ import { bindActionCreators } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { user } from '../store/slices/projects/projects.slice'
+import { projects } from '../store/slices/projects/projects.slice'
+import { admin } from '../store/slices/admin/admin.slice'
 
 const rootActions = {
-	...user.actions,
+	...projects.actions,
+	...admin.actions
 }
 
 export const useActions = () => {
