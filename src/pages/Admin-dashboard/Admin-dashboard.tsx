@@ -1,32 +1,38 @@
-import { FC, useEffect } from 'react'
-// import { useNavigate } from 'react-router-dom'
+import { FC, useEffect, useState } from 'react'
 
 import { AdminDashboardComponent } from './Admin-dashboardComponent'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { Login } from './Login'
 import { useActions } from '../../hooks/useActions'
+import { useLocation } from 'react-router-dom'
 
-export const AdminDashboard: FC = () => {
-	// const navigate = useNavigate()
-	const {auth} = useActions()
+interface IProps {}
+
+export const AdminDashboard: FC<IProps> = () => {
+	const location = useLocation()
+	const { auth } = useActions()
 	const { isAuth } = useTypedSelector(state => state.admin)
 
 	const authorization = (login: string, password: string) => {
-		// console.log(`Authorization, login: ${login}, password: ${password}`)
-		auth({login, password})
-
+		auth({ login, password })
 	}
+	const [activePath, setActivePath] = useState<null | string>(null)
 
-	// useEffect(() => {
-	// 	if (!isAuth) {
-	// 		navigate(Paths.adminAuth)
-	// 	}
-	// }, [isAuth])
+	useEffect(() => {
+		if (location) {
+			let tmp = location.pathname.slice(
+				location.pathname.lastIndexOf('/'),
+				location.pathname.length,
+			)
+			setActivePath(tmp)
+		}
+	}, [location])
 
+	
 
 	if (!isAuth) {
-		return <Login authorization={authorization}/>
+		return <Login authorization={authorization} />
 	} else {
-		return <AdminDashboardComponent />
+		return <AdminDashboardComponent activePath={activePath} />
 	}
 }

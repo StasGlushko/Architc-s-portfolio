@@ -1,19 +1,68 @@
 .wrapper {
 	color: black;
+	display: flex;
 }
 
 // dashboard
 
+.container {
+	padding: 0;
+   height: 100vh;
+
+	.wrapper {
+      height: 100%;
+		.aside {
+         height: 100%;
+			padding: 20px 15px;
+         border-right: #c1c8ff 1px solid;
+
+			.title {
+				font-size: 26px;
+				margin-bottom: 20px;
+			}
+
+			.navigation {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+
+				.navItem {
+               border-radius: 3px;
+					
+               transition: all .3s ease;
+               &:hover {
+                  background-color: #b9b9b9;
+               }
+               
+               &.active {
+                  background-color: #b9b9b9;
+               }
+
+               a {
+						color: black;
+
+                  display: block;
+                  padding: 5px 15px;
+
+                  width: 100%;
+                  height: 100%;
+					}
+            }
+			}
+		}
+	}
+}
+
 // login
 
 .loginContainer {
-   height: 100vh;
-   padding: 0 40px;
+	height: 100vh;
+	padding: 0 40px;
 }
 
 .loginWrap {
 	height: 100%;
-   display: flex;
+	display: flex;
 
 	.form {
 		min-width: 300px;
@@ -21,31 +70,31 @@
 		height: 60%;
 		margin: auto;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
 
 		background-color: rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 5px;
+		padding: 20px;
+		border-radius: 5px;
 
-      input {
-         padding: 7px 10px;
-         outline-color: #838fee;
-      }
+		input {
+			padding: 7px 10px;
+			outline-color: #838fee;
+		}
 
-      button {
-         padding: 7px 20px;
-         cursor: pointer;
+		button {
+			padding: 7px 20px;
+			cursor: pointer;
 
-         border: 1px solid #838fee;
-         border-radius: 4px;
-         
-         transition: background-color .3s ease;
-         &:hover {
-            background-color: #838fee;
-         }
-      }
-   }
+			border: 1px solid #838fee;
+			border-radius: 4px;
+
+			transition: background-color 0.3s ease;
+			&:hover {
+				background-color: #838fee;
+			}
+		}
+	}
 }

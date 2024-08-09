@@ -4,6 +4,7 @@ export const Paths = {
 	contact: '/contact',
 	project: '/projects/:id',
 	admin: '/admin-dashboard',
-	// adminAuth: '/admin-dashboard/login'
-
+	adminProjects: '/admin-dashboard/projects',
+	adminMessages: '/admin-dashboard/messages',
+	adminSettings: '/admin-dashboard/settings',
 } as const

@@ -7,7 +7,8 @@ import { Contact } from '../pages/Contact/Contact'
 import { Projects } from '../pages/Projects/Projects'
 import { Project } from '../pages/Projects/Project/Project'
 import { AdminDashboard } from '../pages/Admin-dashboard/Admin-dashboard'
-import { Login } from '../pages/Admin-dashboard/Login'
+import { ProjectsAd } from '../pages/Admin-dashboard/ProjectsAd/ProjectsAd'
+import { MessagesAd } from '../pages/Admin-dashboard/MessagesAd/MessagesAd'
 
 export const router = createBrowserRouter([
 	{
@@ -32,12 +33,17 @@ export const router = createBrowserRouter([
 	},
 	{
 		path: Paths.admin,
-		element: <AdminDashboard/>,
+		element: <AdminDashboard />,
 		errorElement: <ErrorPage />,
+		children: [
+			{
+				path: Paths.adminProjects,
+				element: <ProjectsAd />,
+			},
+			{
+				path: Paths.adminMessages,
+				element: <MessagesAd />,
+			},
+		],
 	},
-	// {
-	// 	path: Paths.adminAuth,
-	// 	element: <Login/>,
-	// 	errorElement: <ErrorPage />,
-	// },
 ])

@@ -5,3 +5,10 @@ export interface IProjectItem {
 	preview: string
 	id: number
 }
+
+export interface IMessages {
+	name: string
+	email: string
+	message: string
+	id: number
+}
